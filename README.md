@@ -17,4 +17,4 @@ Normalmente, Rust tiene la fama de generar binarios pesados debido a su gestión
 
 ### 💻 El Experimento: Suma y Syscalls
 
-En ambos casos, sume un 10 y un 5, evitando las funciones de impresión estándar y bajé al nivel del kernel usando la interrupción `syscall` de x86_64 para escribir en la terminal y salir del proceso de forma limpia. De esta forma sera igual para ambos casos, no hay errores comparativos por usr un \[u8\] vs String o una simple salida de terminal contra una macro que contruye un texto antes de imprimir (`printf` y `println!`).
+En ambos casos, sume un 10 y un 5, evitando las funciones de impresión estándar y baje al nivel del kernel usando la interrupción `syscall` de x86_64 para escribir en la terminal y salir del proceso de forma limpia. De esta forma sera igual para ambos casos, no hay errores comparativos por usr un \[u8\] vs String o una simple salida de terminal contra una macro que contruye un texto antes de imprimir (`printf` y `println!`).
