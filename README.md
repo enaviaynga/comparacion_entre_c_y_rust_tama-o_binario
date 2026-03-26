@@ -11,7 +11,7 @@ Normalmente, Rust tiene la fama de generar binarios pesados debido a su gestión
 | **C** 🟦 | **13.0 KiB** | `gcc -nostdlib` | 15 |
 | **C** 🟦 | **4.0 KiB** | `gcc -nostdlib -s -static -O3 -fno-asynchronous-unwind-tables -Wl,--build-id=none main.c -o c_mini` | nada |
 
-> **Nota:** Recalco, mi primer lenguaje fue Rust, no se programar C. Este experimento lo inicie pensando que seria mas parejo o rust pesando mas, pero a diferencia de "Linux con Last Dragon", no voy a afirmar que uno sea mejor que otro en este caso, porque no se si c se pueda compilar mejor o he pecado de ignorancia en alguna parte. Aun asi me gustaria aprender mas.
+> **Nota:** Recalco, mi primer lenguaje fue Rust, no se programar C. Este experimento lo inicie pensando que seria mas parejo o rust terminaria pesando mas, pero a diferencia de "Linux con Last Dragon", no voy a afirmar que uno sea mejor que otro en este caso, porque no se si c se pueda compilar mejor o he pecado de ignorancia en alguna parte. Aun asi me gustaria aprender mas.
 
 ---
 
