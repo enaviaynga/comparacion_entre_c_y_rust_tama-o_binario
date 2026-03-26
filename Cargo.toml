@@ -1,0 +1,27 @@
+[package]
+name = "binarios_size"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+# Configuración de optimización para la versión de "release"
+[profile.release]
+# 1. Optimiza por tamaño en lugar de velocidad ('z' es el más agresivo)
+opt-level = "z"
+
+# 2. Elimina el "Stack Unwinding". C no limpia la memoria si el programa falla,
+# simplemente aborta. Con esto, Rust hace lo mismo y elimina mucha lógica de pánico.
+panic = "abort"
+
+# 3. Link Time Optimization (LTO). Analiza todo el grafo de dependencias para
+# eliminar funciones que no se usan en ninguna parte del código final.
+lto = true
+
+# 4. Reduce las unidades de generación de código a 1.
+# Permite que el compilador vea el programa como un todo y optimice mejor.
+codegen-units = 1
+
+# 5. Elimina los símbolos de depuración y la tabla de secciones del binario.
+# Esto es lo que hace el comando 'strip' en Linux.
+strip = true
